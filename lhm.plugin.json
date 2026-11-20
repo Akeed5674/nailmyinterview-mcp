@@ -1,0 +1,41 @@
+{
+  "identifier": "nailmyinterview-mock-interview",
+  "name": "Nail My Interview: Mock Interview",
+  "version": "1.0.0",
+  "description": "Practice job interviews inside your AI assistant: get 5 realistic questions for any job title, answer them, and get honest feedback on each answer.",
+  "author": "Nail My Interview",
+  "homepage": "https://nailmyinterview.com/",
+  "cloudEndpoint": "https://nailmyinterview.com/api/mcp",
+  "icon": "https://nailmyinterview.com/assets/icon-192.png",
+  "category": "productivity",
+  "tags": ["interview", "mock interview", "job search", "career", "interview practice"],
+  "tools": [
+    {
+      "name": "start_mock_interview",
+      "description": "Starts a practice mock interview for a job: returns 5 realistic interview questions for the given job title (and company, if given).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "role": { "type": "string", "minLength": 2, "maxLength": 80, "description": "The job title, e.g. \"Sales associate\" or \"Data analyst\"." },
+          "company": { "type": "string", "maxLength": 80, "description": "Optional company name, e.g. \"Target\"." }
+        },
+        "required": ["role"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_answer_feedback",
+      "description": "Gives feedback on one practice interview answer: a verdict (Strong, Good start or Needs work), what worked, the one thing to fix, and a stronger way to start the answer.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "role": { "type": "string", "minLength": 2, "maxLength": 80, "description": "The job the user is practising for." },
+          "question": { "type": "string", "minLength": 3, "maxLength": 300, "description": "The interview question that was asked." },
+          "answer": { "type": "string", "minLength": 1, "maxLength": 3000, "description": "The user's answer, word for word." }
+        },
+        "required": ["role", "question", "answer"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}
