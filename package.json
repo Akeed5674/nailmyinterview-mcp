@@ -1,0 +1,10 @@
+{
+  "name": "nailmyinterview-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practice job interviews inside your AI assistant: a hosted MCP server that gives 5 realistic interview questions for any job and honest feedback on each answer.",
+  "homepage": "https://nailmyinterview.com/",
+  "repository": { "type": "git", "url": "https://github.com/Akeed5674/nailmyinterview-mcp.git" },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "interview", "mock-interview", "job-search"],
+  "author": "Nail My Interview"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.nailmyinterview/mock-interview",
+  "description": "Free mock job interview: realistic questions for any role and honest feedback on each answer.",
+  "title": "Nail My Interview",
+  "version": "1.0.0",
+  "websiteUrl": "https://nailmyinterview.com/mock-interview/",
+  "icons": [
+    {
+      "src": "https://nailmyinterview.com/assets/icon-192.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "192x192"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://nailmyinterview.com/api/mcp"
+    }
+  ]
+}
